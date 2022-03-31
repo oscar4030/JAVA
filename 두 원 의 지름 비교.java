@@ -10,27 +10,27 @@ public class kms {
 		double distance=((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
 		double distance_2=Math.sqrt(distance);
 		
-		if(distance_2>=(radius1+radius2))return true; //¹İÁö¸§ ´õÇÑ °Íº¸´Ù Å©°Å³ª °°´Ù == °ãÄ¡Áö¾Ê´Â´Ù
-		else return false; //¹İÁö¸§ ´õÇÑ °Íº¸´Ù ÀÛ´Ù == °ãÄ£´Ù 
+		if(distance_2>=(radius1+radius2))return true; //ë°˜ì§€ë¦„ ë”í•œ ê²ƒë³´ë‹¤ í¬ê±°ë‚˜ ê°™ë‹¤ == ê²¹ì¹˜ì§€ì•ŠëŠ”ë‹¤
+		else return false; //ë°˜ì§€ë¦„ ë”í•œ ê²ƒë³´ë‹¤ ì‘ë‹¤ == ê²¹ì¹œë‹¤ 
 	}
 	
 	public static void main(String arg[])
 	{
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.print("Ã¹¹øÂ° ¿øÀÇ Áß½É°ú ¹İÁö¸§ ÀÔ·Â>>");
+		System.out.print("ì²«ë²ˆì§¸ ì›ì˜ ì¤‘ì‹¬ê³¼ ë°˜ì§€ë¦„ ì…ë ¥>>");
 		int x1=scanner.nextInt();
 		int y1=scanner.nextInt();
 		double radius1=scanner.nextDouble();
 		
-		System.out.print("µÎ¹øÂ° ¿øÀÇ Áß½É°ú ¹İÁö¸§ ÀÔ·Â>>");
+		System.out.print("ë‘ë²ˆì§¸ ì›ì˜ ì¤‘ì‹¬ê³¼ ë°˜ì§€ë¦„ ì…ë ¥>>");
 		int x2=scanner.nextInt();
 		int y2=scanner.nextInt();
 		double radius2=scanner.nextDouble();
 		
 		boolean answer=circleDistance(x1, y1, x2, y2, radius1, radius2);
-		if(answer==true) System.out.print("µÎ ¿øÀº °ãÄ¡Áö ¾Ê½À´Ï´Ù");
-		else System.out.print("µÎ ¿øÀº ¼­·Î °ãÄ£´Ù");
+		if(answer==true) System.out.print("ë‘ ì›ì€ ê²¹ì¹˜ì§€ ì•ŠìŠµë‹ˆë‹¤");
+		else System.out.print("ë‘ ì›ì€ ì„œë¡œ ê²¹ì¹œë‹¤");
 		
 		scanner.close();
 	}
